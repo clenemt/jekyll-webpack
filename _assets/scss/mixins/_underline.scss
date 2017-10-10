@@ -1,0 +1,55 @@
+%underline--fancy {
+  &::before {
+    content: '';
+    transition-delay: .2s;
+    transform: translate3d(0%, 0, 0);
+  }
+
+  &:hover::before,
+  &:focus::before,
+  .t-underline__container:hover &::before {
+    transition-delay: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+%underline--fancy-hover {
+  // For our underline--fancy-hover to work properly
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  vertical-align: bottom;
+  text-decoration: none;
+
+  // Underline is now a block of 1px
+  &::after,
+  &::before {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: currentColor;
+    transition: all .7s cubic-bezier(.19, 1, .22, 1);
+  }
+
+  &::after {
+    content: '';
+    transition-delay: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  &:hover,
+  &:focus,
+  .t-underline__container:hover & {
+    color: $link-hover-color;
+    text-decoration: none;
+
+    &::after {
+      transition-delay: .3s;
+      transform: translate3d(0%, 0, 0);
+    }
+  }
+}
+

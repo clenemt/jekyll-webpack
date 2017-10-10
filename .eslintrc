@@ -1,0 +1,16 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [
+    "prettier"                  // https://www.npmjs.com/package/eslint-plugin-prettier
+  ],
+  "env": {
+    "browser": true,            // https://eslint.org/docs/user-guide/configuring#specifying-environments
+  },
+  "extends": [
+    "airbnb",                   // https://www.npmjs.com/package/eslint-config-airbnb
+    "prettier",                 // https://github.com/prettier/eslint-config-prettier
+    "prettier/react"            // https://github.com/prettier/eslint-config-prettier
+  ],
+  rules: {
+  }
+}

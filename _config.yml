@@ -1,0 +1,42 @@
+# Site settings
+# -------------
+
+title: Your awesome title
+description: >-
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+google_analytics: 'UA-XXXXXXXX-X'
+
+# Page settings
+url: ""
+baseurl: ""
+date_format: "%b %-d, %Y"
+
+# Meta settings
+email: clement.moron@gmail.com
+author: Clement Moron
+
+
+# Build settings
+# --------------
+
+markdown: kramdown
+# Make sure the `_pages/` is processed
+include:
+  - _pages
+# Make sure the `_site/assets/` is not trashed (webpack output)
+keep_files:
+  - assets
+# Exclude from processing (not moved to `_site/`)
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - package.json
+  - CNAME
+  - LICENSE
+  - README.md
+  - webpack.config.js
+  - "*.lock"
+  - "*.log"

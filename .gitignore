@@ -1,0 +1,36 @@
+# Jekyll
+_site
+.sass-cache
+.jekyll-metadata
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Node
+.npm
+node_modules/
+jspm_packages/
+.eslintcache
+.node_repl_history
+.yarn-integrity
+
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
