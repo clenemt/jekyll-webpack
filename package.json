@@ -2,8 +2,15 @@
   "name": "clenemt.com",
   "version": "0.0.1",
   "description": "Source code for clenemt.com",
-  "pre-commit": "lint:staged",
+  "email": "clement.moron@gmail.com",
+  "url": "http://www.clenemt.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clenemt/clenemt.com.git"
+  },
+  "license": "MIT",
   "main": "assets/js/entry.js",
+  "pre-commit": "lint:staged",
   "lint-staged": {
     "*.{js,jsx,json}": [
       "prettier --write",
@@ -25,17 +32,8 @@
     "scaffold": "npm run clean && shx mkdir -p _site/assets && shx cp -r _assets/img/. _site/assets",
     "build": "npm run scaffold && cross-env NODE_ENV=production webpack -p --progress && bundle exec jekyll build",
     "build:debug": "npm run scaffold && webpack --progress -d --verbose && bundle exec jekyll build -t",
-    "start": "npm run scaffold && concurrently -k -n \"WEBPACK,JEKYLL,BROWSER-SYNC\" -c \"bgBlue.bold,bgRed.bold,bgCyan.bold\" \"webpack -w\" \"bundle exec jekyll build --watch\" \"browser-sync start -s _site -f _site\"",
-    "pretest": "npm run clean",
-    "test": "echo tests ok"
+    "start": "npm run scaffold && concurrently -k -n \"WEBPACK,JEKYLL,BROWSER-SYNC\" -c \"bgBlue.bold,bgRed.bold,bgCyan.bold\" \"webpack -w\" \"bundle exec jekyll build --watch\" \"browser-sync start -s _site -f _site\""
   },
-  "email": "clement.moron@gmail.com",
-  "url": "http://www.clenemt.com/",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/clenemt/clenemt.com.git"
-  },
-  "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.18.13",
     "concurrently": "^3.5.0",
