@@ -42,9 +42,8 @@ body {
   margin: 0; // 1
   font-family: $font-family;
   font-size: $font-size;
-  font-weight: $font-weight-normal;
+  font-weight: normal;
   line-height: $line-height;
-  letter-spacing: $letter-spacing;
   color: $body-color;
   background-color: $body-bg; // 2
 }
@@ -96,7 +95,7 @@ ul ol {
 }
 
 dt {
-  font-weight: $font-weight-bold;
+  font-weight: bold;
 }
 
 dd {
@@ -117,7 +116,7 @@ dfn {
 // Add the correct font weight in Chrome, Edge, and Safari
 b,
 strong {
-  font-weight: $font-weight-bold;
+  font-weight: bold;
 }
 
 // Add the correct font size in all browsers

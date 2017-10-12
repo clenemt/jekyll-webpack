@@ -2,8 +2,8 @@
 // Assets
 //
 
-$directory-font:  "../../assets/fonts" !default;
-$directory-image: "../../assets/img" !default;
+$directory-font:  "../fonts" !default;
+$directory-image: "../img" !default;
 
 
 //
@@ -11,11 +11,10 @@ $directory-image: "../../assets/img" !default;
 //
 
 $white:  #ffffff !default;
-$black:  #000000 !default;
+$black:  #1A1A1A !default;
 $grey:   #d1d1d1 !default;
 $red:    #e53935 !default;
 $green:  #9ccc65 !default;
-$yellow: #ffd54f !default;
 
 $grey-100: #212529 !default;
 $grey-200: #3e3e3e !default;
@@ -27,19 +26,7 @@ $grey-700: #f6f6f6 !default;
 $grey-800: #f6f6f6 !default;
 $grey-900: #f6f6f6 !default;
 
-$red-100: darken($red, 10%) !default;
-$red-200: $red !default;
-$red-300: lighten($red, 30%) !default;
-
-$green-100: darken($green, 15%) !default;
-$green-200: $green !default;
-$green-300: lighten($green, 25%) !default;
-
-$yellow-100: #ffd54f !default;
-$yellow-200: $yellow !default;
-$yellow-300: lighten($yellow, 20%) !default;
-
-$brand-primary:   #f6a800 !default;
+$brand-primary:   $white !default;
 $brand-secondary: $black !default;
 
 
@@ -70,8 +57,8 @@ $sizes: (
 // Body
 //
 
-$body-bg: $white !default;
-$body-color: $grey-200 !default;
+$body-bg: $black !default;
+$body-color: $white !default;
 
 
 //
@@ -98,9 +85,8 @@ $grid-columns: 12 !default;
 $grid-gutter-width: 20px !default;
 
 $container-max-widths: (
-  // Will be 100% for `sm` and `md`
-  // sm: 540px,
-  // md: 720px,
+  sm: 540px,
+  md: 720px,
   lg: 960px,
   xl: 1140px
 ) !default;
@@ -127,25 +113,17 @@ $disabled-color: $grey-500;
 //
 
 $font-family-sans-serif: "Proxima Nova", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
-$font-family-serif:      "Velino Display", Georgia, "Times New Roman", Times, serif !default;
+$font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family:            $font-family-sans-serif !default;
 
-$font-size:    .8125rem !default;  // 13px
-$font-size-sm: .75rem !default;    // 12px
-$font-size-lg: .875rem !default;   // 14px
-$font-size-xl:  1rem !default;     // 16px
-$font-size-xxl: 1.125rem !default; // 18px
-
-$font-weight-normal: normal !default;
-$font-weight-bold:   bold !default;
+$font-size:    1rem !default;      // 16px
+$font-size-sm: .875rem !default;   // 14px
+$font-size-lg:  1.125rem !default; // 18px
 
 $line-height:    1.5 !default;
 $line-height-sm: 1.5 !default;
 $line-height-lg: 1.5 !default;
-
-$letter-spacing:    .02em !default;
-$letter-spacing-lg: .1em !default;
 
 
 //

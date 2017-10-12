@@ -1,0 +1,21 @@
+//
+// Fonts
+//
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: normal;
+  src:
+    url('#{$directory-font}/proxima_nova.woff2') format('woff2'),
+    url('#{$directory-font}/proxima_nova.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: bold;
+  src:
+    url('#{$directory-font}/proxima_nova-bold.woff2') format('woff2'),
+    url('#{$directory-font}/proxima_nova-bold.woff') format('woff');
+}

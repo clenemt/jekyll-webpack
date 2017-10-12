@@ -3,11 +3,9 @@
 //
 
 // Size
-.t-1 { font-size: $font-size-xxl !important; }
-.t-2 { font-size: $font-size-xl !important; }
-.t-3 { font-size: $font-size-lg !important; }
-.t-4 { font-size: $font-size !important; }
-.t-5 { font-size: $font-size-sm !important; }
+.t-1 { font-size: $font-size-lg !important; }
+.t-2 { font-size: $font-size !important; }
+.t-3 { font-size: $font-size-sm !important; }
 
 // Alignment
 @each $breakpoint in map-keys($grid-breakpoints) {
@@ -43,6 +41,6 @@
 }
 
 // Weight and italic
-.t-normal { font-weight: $font-weight-normal; }
-.t-bold   { font-weight: $font-weight-bold; }
+.t-normal { font-weight: normal; }
+.t-bold   { font-weight: bold; }
 .t-italic { font-style: italic; }

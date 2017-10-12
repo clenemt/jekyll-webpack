@@ -1,0 +1,142 @@
+//
+// Headings
+//
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-top: 0;
+  margin-bottom: ($spacer / 2);
+  font-family: inherit;
+  line-height: 1.1;
+  color: inherit;
+  font-weight: bold;
+}
+
+
+h1, .h1 {
+  font-size: 1.125rem; // 18px
+
+  @include media-breakpoint-up(md) {
+    font-size: 1.25rem; // 20px
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 1.4375rem; // 23px
+  }
+}
+
+h2, .h2 {
+  font-size: .875rem; // 14px
+
+  @include media-breakpoint-up(md) {
+    font-size: 1rem; // 16px
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 1.125rem; // 18px
+  }
+}
+
+h3, .h3 {
+  font-size: .8125rem; // 13px
+
+  @include media-breakpoint-up(md) {
+    font-size: .875rem; // 14px
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: .9375rem; // 15px
+  }
+}
+
+h4, .h4 {
+  font-size: .8125rem; // 14px
+
+  @include media-breakpoint-up(md) {
+    font-size: .9375rem; // 15px
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 1rem; // 16px
+  }
+}
+
+h5, h6,
+.h5, .h6 {
+  font-size: .8125rem; // 11px
+}
+
+
+//
+// Links
+//
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  // Remove the gray background on active links in IE 10
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+
+  p & {
+    // Anchors inside paragraph should always be underlined
+    text-decoration: underline;
+  }
+}
+
+
+//
+// Paragraphs
+//
+
+p {
+  margin-top: 0;
+  margin-bottom: $spacer;
+}
+
+
+//
+// Horizontal rules
+//
+
+hr {
+  margin-top: $spacer;
+  margin-bottom: $spacer;
+  border: 0;
+  border-top: $border-width solid rgba($black, .1);
+}
+
+
+//
+// Emphasis
+//
+
+small,
+.small {
+  font-size: 80%;
+  font-weight: normal;
+}
+
+
+//
+// Lists
+//
+
+.list-unstyled,
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-inline-item {
+  display: inline-block;
+
+  &:not(:last-child) {
+    margin-right: $spacer * .5;
+  }
+}
