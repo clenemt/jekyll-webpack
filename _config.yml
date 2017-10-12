@@ -19,16 +19,27 @@ author: Clement Moron
 # Build settings
 # --------------
 
+# Default markdown parser
 markdown: kramdown
+
+# Make sure that pages don't end up behind weird urls like:`_pages/myPage.html`
+collections:
+  pages:
+    output: true
+    permalink: /:path
+
 # Make sure the `_pages/` is processed
 include:
   - _pages
+
 # Make sure the `_site/assets/` is not trashed (webpack output)
 keep_files:
   - assets
+
 # List our Jekyll plugins below
 plugins:
 - jekyll-seo-tag
+
 # Exclude from processing (not moved to `_site/`)
 exclude:
   - Gemfile
