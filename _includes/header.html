@@ -1,3 +1,19 @@
 <header class="site__header" role="banner">
-  <a href="{{ "/" | relative_url }}" title="Home page">Home page</a>
+
+  {% assign default_pages = site.pages | map: "path" %}
+  {% assign pages = site.navigation | default: default_pages %}
+
+  <a class="site__title" href="{{ "/" | relative_url }}" title="Home page">{{ site.title | escape }}</a>
+
+  {% if pages %}
+    <nav class="nav">
+      {% for path in pages %}
+        {% assign page = site.pages | where: "path", path | first %}
+        {% if page.title %}
+        <a class="nav__item" href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+        {% endif %}
+      {% endfor %}
+    </nav>
+  {% endif %}
+
 </header>
